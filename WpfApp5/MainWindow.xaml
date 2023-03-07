@@ -1,0 +1,79 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="Calculator" Height="539.5" Width="336" Icon="C:\Users\Ilham\Downloads\Icon.png">
+    <Grid Background="#f3f3f3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*" ></RowDefinition>
+            <RowDefinition Height="0.8*" ></RowDefinition>
+            <RowDefinition Height="0.5*" ></RowDefinition>
+            <RowDefinition Height="3.80*" ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Label Content = "Standard" FontSize="18" FontFamily="Georgia" Margin="40,1,195,0"></Label>
+            <Button Height = "35" Width = "35" Margin = "0,0,285,30" Content="" Visibility="Visible" Foreground="Black">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icon2.PNG" Stretch="None"/>
+                </Button.Background>
+            </Button>
+            <Button Height = "35" Width = "35" Margin = "0,0,30,30" Content="">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icon3.PNG" Stretch="None" TileMode="None"/>
+                </Button.Background>
+            </Button>
+            <Button Height = "35" Width = "35" Margin = "280,0,0,30" Content="">
+                <Button.Background>
+                    <ImageBrush Stretch="None" ImageSource="/Icon4.PNG"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <TextBox x:Name="Textbox1" Text="{Binding Result}" IsReadOnly="True" FontSize="45" HorizontalContentAlignment="Right" Margin="0,0,0,0" Height="67" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel Margin = "13,0,0,0" Orientation="Horizontal">
+                <Button Width = "45" Background="#f3f3f3" Margin = "2" Content="MC" Foreground="Black"/>
+                <Button Width = "45" Background="#f3f3f3" Margin = "2" Content="MR"/>
+                <Button Width = "45" Background="#f3f3f3" Margin = "2" Content="M+"/>
+                <Button Width = "45" Background="#f3f3f3" Margin = "2" Content="M-"/>
+                <Button Width = "45" Background="#f3f3f3" Margin = "2" Content="MS"/>
+                <Button Width = "45" Background="#f3f3f3" Margin = "2" Content="M"/>
+            </StackPanel>
+
+        </Grid>
+        <Grid Grid.Row="3">
+            <WrapPanel Margin="1,10,0,0">
+                <Button Background="#f3f3f3" Content = "%" Margin = "1" Height = "49" Width = "78" FontSize = "20"></Button>
+                <Button Background="#f3f3f3" Content = "CE" Margin = "1" Height = "49" Width = "78" FontSize = "15" Click="Clear_Click"></Button>
+                <Button Background="#f3f3f3" Content = "C" Margin = "1" Height = "49" Width = "78" FontSize = "15" Click="Clear_Click"></Button>
+                <Button Background="#f3f3f3" Margin = "1" Height = "49" Width = "78" FontSize = "20"></Button>
+                <Button Background="#f3f3f3" Margin = "1" Height = "49" Width = "78" FontSize = "20"></Button>
+                <Button Background="#f3f3f3" Margin = "1" Height = "49" Width = "78" FontSize = "20"></Button>
+                <Button Background="#f3f3f3" Margin = "1" Height = "49" Width = "78" FontSize = "20"></Button>
+                <Button Background="#f3f3f3" Margin = "1" Height = "49" Width = "78" FontSize = "20"></Button>
+                <Button Background="#f3f3f3" Content = "7" Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click"></Button>
+                <Button Background="#f3f3f3" Content = "8" Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click"></Button>
+                <Button Background="#f3f3f3" Content = "9" Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click"></Button>
+                <Button Background="#f3f3f3" Content = "x" Margin = "1" Height = "49" Width = "78" FontSize = "27" Click="Operation_Click"></Button>
+                <Button Background="#f3f3f3" Content = "4" Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click"></Button>
+                <Button Background="#f3f3f3" Content = "5" Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click"></Button>
+                <Button Background="#f3f3f3" Content = "6" Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click"></Button>
+                <Button Background="#f3f3f3" Content = "-" Margin = "1" Height = "49" Width = "78" FontSize = "27" Click="Operation_Click"></Button>
+                <Button Background="#f3f3f3" Content = "1" Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click"></Button>
+                <Button Background="#f3f3f3" Content = "2" Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click" ></Button>
+                <Button Background="#f3f3f3" Content = "3" Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click"></Button>
+                <Button Background="#f3f3f3" Content = "+" Margin = "1" Height = "49" Width = "78" FontSize = "27" Click="Operation_Click"></Button>
+                <Button Background="#f3f3f3" Content = "" Margin = "1" Height = "49" Width = "78" FontSize = "20"></Button>
+                <Button Background="#f3f3f3" Content = "0" Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click"></Button>
+                <Button Background="#f3f3f3" Content = "," Margin = "1" Height = "49" Width = "78" FontSize = "20" Click="Number_Click"></Button>
+                <Button Background="#f3f3f3" Content = "=" Margin = "1" Height = "49" Width = "78" FontSize = "27" Click="Equals_Click"></Button>
+            </WrapPanel>
+        </Grid>
+    </Grid>
+</Window>
